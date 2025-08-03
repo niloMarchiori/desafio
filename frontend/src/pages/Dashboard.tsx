@@ -56,7 +56,7 @@ const Dashboard = () => {
   const catOptions = {
     chart: { type: "bar" as const },
     colors: chartColors,
-    xaxis: { categories: Object.keys(metrics.revenue_by_category) },
+    xaxis: { categories: Object.keys(metrics.revenue_by_category).sort() },
     yaxis: {
       labels: { formatter: (v: number) => toBRL(v) },
     },

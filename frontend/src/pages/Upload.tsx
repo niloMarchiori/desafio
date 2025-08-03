@@ -60,7 +60,7 @@ const Upload = () => {
           throw new Error(err.error || "Falha no upload");
         }
     
-        const { metrics } = await res.json(); 
+        const metrics = await res.json(); 
     
         setMetrics(metrics);         // mantém a lógica existente
         setIsDataLoaded(true);
