@@ -22,7 +22,7 @@ O projeto, como está, possui bugs que corrompem a análise. Esperamos que você
 
 Encare esse processo como um processo de testagem e revisão do projeto, analisando os fluxos e detalhes das páginas.
 
-Ao identificar e resolver um problema, documente num relatório simplificado ([modelo disponível aqui](https://drive.google.com/drive/home)) como encontrou e resolveu cada erro. 
+Ao identificar e resolver um problema, documente num relatório simplificado como encontrou e resolveu cada erro. 
 
 ### Parte 2: Implementação de Nova Feature de Análise
 
@@ -46,7 +46,7 @@ Com a base do projeto funcionando, queremos que você implemente pelo menos uma 
 
 ## O Relatório
 
-No seu relatório, você irá descrever de forma concisa (seguindo o modelo):
+No seu relatório, você irá descrever de forma concisa:
 
 * **Diagnóstico:** Quais foram os erros que você encontrou e qual era a causa raiz de cada um.
 * **Solução:** Como você resolveu cada um dos problemas.
