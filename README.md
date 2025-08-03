@@ -31,11 +31,11 @@ Com a base do projeto funcionando, queremos que você implemente pelo menos uma 
 * **Opção A: Filtros por Período de Tempo**
     * Adicione ao dashboard a opção de filtrar toda a análise por um período: "Últimos 7 dias", "Este Mês" ou um intervalo de datas personalizado.
 
-* **Opção B: Gráfico de Vendas por Categoria**
-    * Adicione um novo gráfico (barras ou pizza) ao dashboard que mostra o faturamento total para cada categoria de produto.
+* **Opção B: Gráfico de Vendas por Região**
+    * Adicione um novo gráfico (barras ou pizza) ao dashboard que mostra o faturamento total para cada região.
 
-* **Opção C: Tabela de "Top 5 Produtos"**
-    * Crie uma tabela no dashboard que mostre os 5 produtos mais vendidos (em unidades) e, para cada um, a quantidade de vendas e o faturamento total.
+* **Opção C: Tabela de "Top 5 Clientes"**
+    * Crie uma tabela no dashboard que mostre os 5 maiores clientes (em unidades) e, para cada um, a quantidade de vendas e o faturamento total.
 
 ## Como Entregar
 
@@ -55,9 +55,12 @@ No seu relatório, você irá descrever de forma concisa (seguindo o modelo):
 
 ## Configuração do Ambiente
 
-Para rodar o projeto, você precisará de Python e Pip. O projeto usa a biblioteca Pandas para manipulação de dados.
+Para rodar o projeto você precisará ter **Python 3.10+** e **Node.js 18+** (ou o runtime [Bun](https://bun.sh/) caso prefira).  
+O backend utiliza Django e Pandas, enquanto o frontend é construído com Vite + React.
 
-**Formato do CSV esperado:** O arquivo `vendas.csv` possui as colunas: `produto,categoria,preco,data` (data no formato `YYYY-MM-DD`).
+**Formato do CSV esperado:** O arquivo `sales.csv` está no repositório.
+
+### Backend (API Django)
 
 ```bash
 # 1. Clone o repositório e entre na pasta
@@ -66,17 +69,35 @@ cd [NOME_DA_PASTA]
 
 # 2. Crie e ative um ambiente virtual
 python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 3. Instale as dependências
+# 3. Instale as dependências do backend
 pip install -r requirements.txt
 
-# 4. Rode as migrações e crie um superusuário
+# 4. Aplique as migrações e (opcional) crie um superusuário
 python manage.py migrate
 python manage.py createsuperuser
 
-# 5. Inicie o servidor
-python manage.py runserver
+# 5. Inicie a API
+python manage.py runserver 8000
 ```
+
+### Frontend (Vite + React)
+
+Abra um novo terminal na raiz do projeto e execute:
+
+```bash
+# 1. Acesse a pasta do frontend
+cd frontend
+
+# 2. Instale as dependências
+npm install          # ou bun install
+
+# 3. Inicie o servidor de desenvolvimento
+npm run dev          # ou bun run dev
+```
+
+O Vite iniciará o frontend em `http://localhost:5173` (ou outra porta caso já esteja em uso).  
+Mantenha a API executando em `http://localhost:8000` para que o front-end possa consumir os endpoints corretamente.
 
 Boa sorte! Estamos muito interessados em ver como você aborda o desafio. 
