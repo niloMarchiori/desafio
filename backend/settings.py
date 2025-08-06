@@ -135,7 +135,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"          # pasta gerada pelo collectstatic
 STATICFILES_DIRS = [
-    BASE_DIR.parent / "frontend" / "dist",      # build do Vite
+    BASE_DIR / "frontend" / "dist",      # build do Vite
 ]
 
 # Default primary key field type
